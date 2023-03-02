@@ -1,0 +1,12 @@
+/home/ashura/GitHub/OmniErp/PremiumIdentityLibrary/bin/Debug/net6.0/PremiumIdentityLibrary.deps.json
+/home/ashura/GitHub/OmniErp/PremiumIdentityLibrary/bin/Debug/net6.0/PremiumIdentityLibrary.dll
+/home/ashura/GitHub/OmniErp/PremiumIdentityLibrary/bin/Debug/net6.0/PremiumIdentityLibrary.pdb
+/home/ashura/GitHub/OmniErp/PremiumIdentityLibrary/obj/Debug/net6.0/PremiumIdentityLibrary.csproj.AssemblyReference.cache
+/home/ashura/GitHub/OmniErp/PremiumIdentityLibrary/obj/Debug/net6.0/PremiumIdentityLibrary.GeneratedMSBuildEditorConfig.editorconfig
+/home/ashura/GitHub/OmniErp/PremiumIdentityLibrary/obj/Debug/net6.0/PremiumIdentityLibrary.AssemblyInfoInputs.cache
+/home/ashura/GitHub/OmniErp/PremiumIdentityLibrary/obj/Debug/net6.0/PremiumIdentityLibrary.AssemblyInfo.cs
+/home/ashura/GitHub/OmniErp/PremiumIdentityLibrary/obj/Debug/net6.0/PremiumIdentityLibrary.csproj.CoreCompileInputs.cache
+/home/ashura/GitHub/OmniErp/PremiumIdentityLibrary/obj/Debug/net6.0/PremiumIdentityLibrary.dll
+/home/ashura/GitHub/OmniErp/PremiumIdentityLibrary/obj/Debug/net6.0/refint/PremiumIdentityLibrary.dll
+/home/ashura/GitHub/OmniErp/PremiumIdentityLibrary/obj/Debug/net6.0/PremiumIdentityLibrary.pdb
+/home/ashura/GitHub/OmniErp/PremiumIdentityLibrary/obj/Debug/net6.0/ref/PremiumIdentityLibrary.dll

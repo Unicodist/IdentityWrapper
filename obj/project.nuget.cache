@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "Y7GIb46X/PidH7Dp/Ee4k0QZ1Vdr/W//4qdWBzajJZ/YljBztLyFPsi5clE9momjf7BHPBlmQAIVP2ikaEh9gw==",
+  "success": true,
+  "projectFilePath": "/home/ashura/GitHub/OmniErp/PremiumIdentityLibrary/PremiumIdentityLibrary.csproj",
+  "expectedPackageFiles": [
+    "/home/ashura/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/7.0.0/microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
