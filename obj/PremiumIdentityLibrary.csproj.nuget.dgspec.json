@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/ashura/GitHub/OmniErp/PremiumIdentityLibrary/PremiumIdentityLibrary.csproj": {}
+    "/home/ashura/GitHub/OmniErp/IdentityWrapper/PremiumIdentityLibrary.csproj": {}
   },
   "projects": {
-    "/home/ashura/GitHub/OmniErp/PremiumIdentityLibrary/PremiumIdentityLibrary.csproj": {
+    "/home/ashura/GitHub/OmniErp/IdentityWrapper/PremiumIdentityLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/ashura/GitHub/OmniErp/PremiumIdentityLibrary/PremiumIdentityLibrary.csproj",
+        "projectUniqueName": "/home/ashura/GitHub/OmniErp/IdentityWrapper/PremiumIdentityLibrary.csproj",
         "projectName": "PremiumIdentityLibrary",
-        "projectPath": "/home/ashura/GitHub/OmniErp/PremiumIdentityLibrary/PremiumIdentityLibrary.csproj",
+        "projectPath": "/home/ashura/GitHub/OmniErp/IdentityWrapper/PremiumIdentityLibrary.csproj",
         "packagesPath": "/home/ashura/.nuget/packages/",
-        "outputPath": "/home/ashura/GitHub/OmniErp/PremiumIdentityLibrary/obj/",
+        "outputPath": "/home/ashura/GitHub/OmniErp/IdentityWrapper/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/ashura/.nuget/NuGet/NuGet.Config"
