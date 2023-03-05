@@ -65,4 +65,14 @@ public class IdentityContext
         return user!;
 
     }
+
+    public string GetIdentityHost()
+    {
+        return _identityConfig.IdentityHost;
+    }
+
+    public string GetLoginPath(string returnUrl)
+    {
+        return $"{_identityConfig.LoginPath}?clientId={_identityConfig.ClientId}&returnUrl={returnUrl}";
+    }
 }
