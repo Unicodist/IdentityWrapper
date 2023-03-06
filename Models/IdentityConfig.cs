@@ -2,7 +2,7 @@ namespace PremiumIdentity.Models;
 
 public class IdentityConfig
 {    
-    public IdentityConfig(string identityHost, string clientName, string apiKey,string clientId)
+    public IdentityConfig(string identityHost, string? clientName, string apiKey,string clientId)
     {
         IdentityHost = identityHost;
         ClientName = clientName;
@@ -16,7 +16,7 @@ public class IdentityConfig
         LoginPath = "http://103.198.9.245:8081/oauth/login";
     }
     internal string IdentityHost { get; set; }
-    private string ClientName { get; set; }
+    private string? ClientName { get; set; }
     internal string ApiKey { get; set; }
     internal string ClientId { get; set; }
 
