@@ -2,7 +2,7 @@ namespace PremiumIdentity.Helpers;
 
 public class StartupMessageHelper
 {
-    public static void PrintWelcomeMessage(string? hostName, string appName)
+    public static void PrintWelcomeMessage(string hostName, string? appName)
     {
         Console.WriteLine();
         Console.ForegroundColor = ConsoleColor.Cyan;
