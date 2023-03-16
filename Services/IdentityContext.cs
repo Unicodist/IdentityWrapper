@@ -1,6 +1,8 @@
 using System.Net;
 using System.Net.Http.Json;
+using Microsoft.AspNetCore.Http;
 using PremiumIdentity.Entities;
+using PremiumIdentity.Extensions;
 using PremiumIdentity.Models;
 
 namespace PremiumIdentity.Services;
@@ -8,17 +10,17 @@ namespace PremiumIdentity.Services;
 public class IdentityContext
 {
     private readonly HttpClient _client;
-    private readonly IdentityConfig _identityConfig;
-    public IdentityContext(IdentityConfig identityConfig)
+    private readonly IdentityOptions _identityOptions;
+    public IdentityContext(IdentityConfig identityConfig, IHttpContextAccessor httpContextAccessor)
     {
-        _identityConfig = identityConfig;
+        _identityOptions = identityConfig.GetIdentityOptions(httpContextAccessor);
         _client = new HttpClient();
-        _client.DefaultRequestHeaders.Add("x-api-key",_identityConfig.ApiKey);
-        _client.DefaultRequestHeaders.Add("XClientId",_identityConfig.ClientId);
+        _client.DefaultRequestHeaders.Add("x-api-key",_identityOptions.ApiKey);
+        _client.DefaultRequestHeaders.Add("XClientId",_identityOptions.ClientId);
     }
     public async Task<string?> RefreshSession(string refreshToken)
     {
-        var url = $"{_identityConfig.VerifyEndpoint}/{refreshToken}";
+        var url = $"{_identityOptions.VerifyEndpoint}/{refreshToken}";
         var response = await _client.GetAsync(url);
         if (response.IsSuccessStatusCode)
         {
@@ -33,7 +35,7 @@ public class IdentityContext
     }
     public async Task<PremiumUserModel?> GetUserAsync(string uid)
     {
-        var url = $"{_identityConfig.UserUrl}/{uid}";
+        var url = $"{_identityOptions.UserUrl}/{uid}";
         var response = await _client.GetAsync(url);
         
         if (response.IsSuccessStatusCode)
@@ -46,7 +48,7 @@ public class IdentityContext
 
     public async Task<ICollection<PendingUser>> GetPendingUsersAsync()
     {
-        var url = $"{_identityConfig.PendingUsers}";
+        var url = $"{_identityOptions.PendingUsers}";
         var response = await _client.GetAsync(url);
 
         if (!response.IsSuccessStatusCode) throw new Exception("Something went wrong");
@@ -57,7 +59,7 @@ public class IdentityContext
 
     public async Task<PendingUser> InviteUserAsync(string identifier)
     {
-        var url = $"{_identityConfig.InviteUser}/{identifier}";
+        var url = $"{_identityOptions.InviteUser}/{identifier}";
         var response = await _client.GetAsync(url);
 
         if (!response.IsSuccessStatusCode) throw new Exception("Something went wrong");
@@ -68,11 +70,13 @@ public class IdentityContext
 
     public string GetIdentityHost()
     {
-        return _identityConfig.IdentityHost;
+        return _identityOptions.Host;
     }
 
     public string GetLoginPath(string returnUrl)
     {
-        return $"{_identityConfig.LoginPath}?clientId={_identityConfig.ClientId}&returnUrl={returnUrl}";
+        // Todo: screen all the string parameters for XSS
+        // Todo: [In PremiumIdServer] screen all the string parameters for SQL/Xss injection
+        return $"{_identityOptions.LoginPath}?clientId={_identityOptions.ClientId}&returnUrl={returnUrl}";
     }
 }
